@@ -69,6 +69,8 @@ module CarrierWave
 
           if opts[:version]
             img = self.object.send(attachment).url(opts[:version])
+          elsif opts[:url]
+            img = opts[:url]
           else
             img = self.object.send(attachment).url
           end
